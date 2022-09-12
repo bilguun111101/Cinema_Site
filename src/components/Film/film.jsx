@@ -33,7 +33,7 @@ const Film = (props) => {
           index === bool.length - 1 ? !el : (el = false)
         )
       );
-      navigate("/" + pathId.home + "/" + pathId.film + "/" + pathId.chair);
+      navigate(`/${pathId.home}/${pathId.film}/${pathId.chair}`);
     }
   };
 
