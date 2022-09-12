@@ -18,7 +18,7 @@ const Film = (props) => {
   // handle input
 
   const btnHandle = () => {
-    if (inputObj.adult === "" || inputObj.child === "") {
+    if (inputObj.adult === "" && inputObj.child === "") {
       alert("Мэдээлэл дутуу байна!!!");
       return;
     } else {
