@@ -1,8 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import "https://kit.fontawesome.com/a076d05399.js";
-import { Badge, Button, Icon } from "@mui/material";
-// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useState } from "react";
+import { Button, Icon } from "@mui/material";
 
 const styles = {
   Btn: {
@@ -14,17 +12,14 @@ const styles = {
     borderBottom: "5px solid red",
   },
   shopping: {
-    color: "#FFF"
-  }
+    color: "#FFF",
+  },
 };
 
 const Teml = (props) => {
   const bool = props.bool;
   const setBool = props.setBool;
   const navigation = useNavigate();
-  // const [boolfa, setBoolFa] = useState(false);
-
-  console.log(props.name.name)
 
   const change = () => {
     setBool((old) => old.map((el) => (el = false)));
@@ -38,7 +33,7 @@ const Teml = (props) => {
       onClick={() => change(props.index)}
     >
       <Link to={props.name.path}>
-        <Icon className={`fas fa-${props.name.name}`} sx={styles.shopping}/>
+        <Icon className={`fas fa-${props.name.name}`} sx={styles.shopping} />
       </Link>
     </Button>
   );
